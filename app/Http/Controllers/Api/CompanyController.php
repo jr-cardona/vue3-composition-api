@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\CompanyRequest;
 use App\Http\Resources\CompanyResource;
 use App\Models\Company;
-use Illuminate\Http\Request;
 
 class CompanyController extends Controller
 {
@@ -23,10 +22,10 @@ class CompanyController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param CompanyRequest $request
      * @return CompanyResource
      */
-    public function store(Request $request)
+    public function store(CompanyRequest $request)
     {
         $company = Company::create($request->validated());
 
